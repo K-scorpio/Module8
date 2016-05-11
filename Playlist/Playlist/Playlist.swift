@@ -14,7 +14,7 @@ class Playlist: Equatable {
     let name: String
     var songs: [Song]
     
-    init(name: String, song: [Song] = [] ) {
+    init(name: String, songs: [Song] = [] ) {
         self.name = name
         self.songs = songs
     }

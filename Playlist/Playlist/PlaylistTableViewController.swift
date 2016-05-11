@@ -21,12 +21,14 @@ class PlaylistTableViewController: UITableViewController {
     
     //MARK: - IBActions
 
-    @IBOutlet weak var addButtonTapped: UIBarButtonItem!
+    @IBAction func addButtonTapped(sender: AnyObject) {
+
     
-    if let playlistName = playlistNameTextField.text where playlistName.characters.count > 0 {
-            PlaylistController.sharedInstance.addPlaylist(playlistName)
+    if let playlistNameText = playlistName.text where playlistNameText.characters.count > 0 {
+            PlaylistController.sharedInstance.addPlaylist(playlistNameText)
             tableView.reloadData()
-            playlistNameTextField.text = ""
+            playlistName.text = ""
+    }
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,7 +45,7 @@ class PlaylistTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("playlistCell", forIndexPath: indexPath)
 
         let playlist = PlaylistController.sharedInstance.playlists[indexPath.row]
         

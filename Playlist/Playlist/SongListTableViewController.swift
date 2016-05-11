@@ -27,14 +27,15 @@ class SongListTableViewController: UITableViewController {
     
     //MARK: - IBActions
     
-    @IBOutlet weak var addButtonTapped: UIBarButtonItem!
-    if let title = titleTextField.text, artist = artistTextField.text, let playlist = playlist {
+    @IBAction func addButtonTapped(sender: AnyObject) {
+
+    if let title = SongTitleTextField.text, artist = ArtistTextField.text, let playlist = playlist {
         SongController.createSong(title, artist: artist, playlist: playlist)
         tableView.reloadData()
-        titleTextField.text = ""
-        artistTextField.text = ""
+        SongTitleTextField.text = ""
+        ArtistTextField.text = ""
     }
-    
+}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -51,7 +52,7 @@ class SongListTableViewController: UITableViewController {
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("songCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("SongCell", forIndexPath: indexPath)
 
         let song = playlist?.songs[indexPath.row]
         

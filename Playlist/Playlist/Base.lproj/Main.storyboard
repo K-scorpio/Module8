@@ -66,10 +66,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="5nd-yq-8OU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Glf-Eg-tx2"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Glf-Eg-tx2">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="sLD-sK-ux0" id="deL-NA-muh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="ButtonTapped" destination="Glf-Eg-tx2" id="tY4-au-SPP"/>
                         <outlet property="playlistName" destination="Heu-CB-shn" id="R45-X4-vWW"/>
                     </connections>
                 </tableViewController>
@@ -111,7 +114,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" textLabel="Imu-XC-ra0" detailTextLabel="xbC-E2-iFh" style="IBUITableViewCellStyleSubtitle" id="tnL-lJ-UXj">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" textLabel="Imu-XC-ra0" detailTextLabel="xbC-E2-iFh" style="IBUITableViewCellStyleValue1" id="tnL-lJ-UXj">
                                 <rect key="frame" x="0.0" y="176" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tnL-lJ-UXj" id="6H8-Nl-3Qf">
@@ -119,17 +122,17 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Imu-XC-ra0">
-                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <rect key="frame" x="15" y="12" width="31.5" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xbC-E2-iFh">
-                                            <rect key="frame" x="15" y="25.5" width="30.5" height="13.5"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xbC-E2-iFh">
+                                            <rect key="frame" x="543.5" y="12" width="41.5" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -142,12 +145,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="zlZ-KX-grO">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kWG-Kx-zr6"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kWG-Kx-zr6">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="Pnv-8G-HsS" id="2B9-M3-KH3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="ArtistTextField" destination="psX-g8-XzI" id="w2g-VD-1qx"/>
                         <outlet property="SongTitleTextField" destination="eCZ-oP-BjQ" id="nMb-M7-Evx"/>
-                        <outlet property="addButtonTapped" destination="kWG-Kx-zr6" id="5rv-Bd-Aq2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uD-ud-T2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
